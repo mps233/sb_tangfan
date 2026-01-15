@@ -11,6 +11,8 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .main-content {
