@@ -12,6 +12,32 @@ const adjectives = [
     '白痴'
 ];
 
+// 照片列表
+const photos = [
+    'asset/IMG_0665.jpg',
+    'asset/IMG_1096.jpg',
+    'asset/IMG_1122.jpg',
+    'asset/IMG_1123.jpg',
+    'asset/IMG_1145.jpg',
+    'asset/IMG_1173.jpg',
+    'asset/IMG_1189.jpg',
+    'asset/IMG_1192.jpg',
+    'asset/IMG_1194.jpg',
+    'asset/IMG_1205.jpg',
+    'asset/IMG_1209.jpg',
+    'asset/IMG_1225.jpg',
+    'asset/IMG_1251.jpg',
+    'asset/IMG_1254.jpg',
+    'asset/IMG_1283.jpg',
+    'asset/IMG_5651.jpg',
+    'asset/IMG_8112.jpg',
+    'asset/IMG_8147.jpg',
+    'asset/IMG_8153.jpg',
+    'asset/IMG_8229.jpg',
+    'asset/IMG_8234.jpg',
+    'asset/IMG_8249.jpg'
+];
+
 let currentIndex = 0;
 
 // 添加鼠标移动效果
@@ -49,4 +75,26 @@ document.getElementById('switchBtn').addEventListener('click', () => {
         adjectiveElement.textContent = adjectives[currentIndex];
         adjectiveElement.style.opacity = '1';
     }, 200);
+});
+
+// 照片弹窗功能
+const photoBtn = document.getElementById('photoBtn');
+const photoModal = document.getElementById('photoModal');
+const closeBtn = document.getElementById('closeBtn');
+const photoImg = document.getElementById('photoImg');
+
+photoBtn.addEventListener('click', () => {
+    const randomPhoto = photos[Math.floor(Math.random() * photos.length)];
+    photoImg.src = randomPhoto;
+    photoModal.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', () => {
+    photoModal.style.display = 'none';
+});
+
+photoModal.addEventListener('click', (e) => {
+    if (e.target === photoModal) {
+        photoModal.style.display = 'none';
+    }
 });
