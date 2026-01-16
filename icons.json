@@ -1,0 +1,10 @@
+{
+  "name": "喷汤钒专用",
+  "description": "汤钒图标集合，当前版本日期为260117",
+  "icons": [
+    {
+      "name": "tangpaofan",
+      "url": "https://raw.githubusercontent.com/mps233/sb_tangfan/main/asset/tangpaofan.png"
+    }
+  ]
+}
